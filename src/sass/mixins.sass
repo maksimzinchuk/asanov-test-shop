@@ -1,0 +1,14 @@
+@mixin text-params($size, $lineHeight, $weight, $style, $color)
+    font: 
+        style: $style
+        weight: $weight
+        size: $size
+    line-height: $lineHeight
+    color: $color
+
+@mixin back-image($url, $width, $height)
+    background-image: url($url)
+    background-size: $width, $height
+    width: $width
+    height: $height
+    background-repeat: no-repeat

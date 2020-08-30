@@ -1,0 +1,191 @@
+.footer
+    max-width: 1000px
+    margin-left: 280px
+    &__column
+        &:last-of-type
+            margin-right: 84px 
+    
+    &__column-links
+        list-style: none
+        margin: 0
+        padding: 0
+
+        &_modifier
+            margin-top: 9px
+
+        &-mobile_show
+            display: block !important
+
+    &__column-title
+        @include text-params(14px, 24px, normal, normal, $darkColor)
+        margin: 0 0 9px
+        
+    &__column_link
+        @include text-params(14px, 24px, normal, normal, $greyColor)
+  
+    &__menu
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-left: 40px
+
+    &__social
+        margin-right: 80px
+    
+    &__payment-text
+        @include text-params(14px, 24px, normal, normal, $darkColor)
+        margin: 0 0 10px
+
+    &__social-text
+        @include text-params(14px, 24px, normal, normal, $darkColor)
+        margin: 0 0 10px
+
+    &__payment-image
+        margin-right: 12px
+
+    &__social-image
+        margin-right: 3px
+
+    &__social-wrapper
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        margin-left: 40px
+        margin-top: 25px
+
+    &__rating
+        margin-bottom: 17px !important
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__rating-star
+        margin-left: 12px
+
+    &__line
+        color: #E6E4E7
+        margin: 0
+        display: none 
+
+    &__button
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+    &__arrow
+        &_down
+            @include back-image('../images/icon/arrow-bold-3.svg', 13px, 13px)
+            margin-right: 6px
+            
+        &_up
+            background-image: url(../images/icon/arrow-bold-4.svg)
+
+        &_down, &_up
+            display: none
+
+
+    &__line-item
+        margin-bottom: 8px
+
+    &__credits
+        margin: 30px 0 0 40px
+
+    &__text
+        margin: 0
+
+    &__credits-wrapper
+        display: flex
+        justify-content: space-between
+        margin: 16px 0
+
+    &__credits-design
+        display: flex
+        align-items: center
+
+    &__politics, &__text, &__design
+        @include text-params(12px, 16px, normal, normal, $darkColor)
+
+
+    &__design
+        margin: 0 40px 0 4px
+        
+    &__star
+        @include back-image('../images/icon/design.svg', 16px, 16px)
+
+    &__phone-wrapper 
+        display: flex
+
+    &__info
+        display: flex
+        align-items: center
+    &__phone
+        margin: 0
+        display: none
+
+    &__phone-image
+        @include back-image('../images/icon/phone.svg', 24px, 24px)
+        display: none
+        &_mobile
+            margin-right: 8px 
+
+    &__column_link:hover
+        color: $pinkColor
+    
+@media (max-width: 952px)
+    .footer
+        &__menu
+            margin: 0 20px
+
+@media (max-width: 767px)
+    .footer
+        margin: 0 16px
+
+        &__menu
+            flex-direction: column
+            margin: 0
+
+            &-item
+                margin-top: 8px
+
+                &:last-of-type
+                    margin-bottom: 6px
+
+        &__column-title
+            margin: 8px 0 8px
+
+            &:last-of-type
+                margin: 8px 0 8px
+
+        &__column-links-mobile
+            display: none
+
+        &__column
+            &:last-of-type
+                margin-right: 0
+
+        &__social-wrapper
+            flex-direction: column-reverse
+            margin: 0
+
+        &__payment
+            margin-top: 32px
+
+        &__payment-text
+            margin: 0 0 13px
+
+        &__social
+            margin-top: 33px
+
+        &__credits
+            margin: 27px 0 0 0
+  
+        &__credits-wrapper
+            flex-direction: column
+
+        &__credits-design
+            margin-top: 28px
+
+        &__arrow_down, &__arrow_up, &__phone, &__phone-image, &__line
+            display: block

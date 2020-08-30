@@ -1,0 +1,153 @@
+.header 
+  max-width: 1000px
+  height: 72px
+  background: #f2f1f3
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  position: sticky
+  top: 0
+  z-index: 5
+  margin-left: 280px
+
+  &__arrow 
+    margin-left: 10px
+    &_mobile
+      margin-left: 1px
+      height: 8px
+      width: 8px
+    
+  &__point
+    @include back-image('../images/icon/pin.svg', 14px, 20px)
+    background-position: center
+
+    &_footer
+      width: 100px
+    
+  &__shop 
+    display: flex
+    &_footer
+      width: 94px
+      margin: 21px auto 32px 40px
+    
+  &__text 
+    @include text-params(14px, 24px, normal, normal, $darkColor)
+    margin: 0
+    margin-right: 30px 
+    &_mobile
+      display: none
+      width: 132px
+      margin: 8px 0 9px 16px
+  
+  &__shop-text
+    @include text-params(14px, 24px, normal, normal, $darkColor)
+    margin: 0 0 0 9px
+
+  &__phone
+    @include text-params(14px, 24px, normal, normal, $darkColor)
+    margin: 0
+    &:first-of-type
+      margin-right: 16px
+    &:last-of-type
+      margin-right: 24px
+    
+  &__button
+    @include text-params(14px, 24px, normal, normal, $pinkColor)
+    width: 149px
+    height: 48px
+    text-align: center
+    padding: 0.7rem
+    border: 1px solid $pinkColor
+    box-sizing: border-box
+    border-radius: 8px
+    
+  &__left
+    display: flex
+    margin-left: 40px
+
+  &__right
+    display: flex
+    align-items: center
+    margin-right: 45px
+
+  &__left-mobile, &__right-mobile
+    align-items: center
+    display: none
+
+  &__right-mobile
+    margin-right: 0
+  
+  &__logo-mobile
+    margin-left: 17px
+    width: 190px
+
+  &__menu-mobile
+    @include back-image('../images/icon/menu.svg', 24px, 24px)
+    margin-left: 13px
+    border: none
+    display: none
+    &_opened
+      background-image: url(../images/icon/close-big.svg) !important
+    
+  &__shop:hover &__point
+    background-image: url(../images/icon/pinHover.svg)
+
+  &__shop:hover &__shop-text
+    color: $pinkColor
+
+  &__shop:hover
+    text-decoration: none
+    
+  &__phone:hover
+    color: $pinkColor
+    
+  &__button:hover 
+    color: $whiteColor
+    background: $pinkColor
+    border-radius: 8px
+
+  &__menu-mobile:focus
+    outline-style: none
+    
+    
+
+@media (max-width: 1080px)
+  .header
+    &__phone
+      display: none
+
+@media (max-width: 790px)
+  .header
+    &__button
+      display: none
+
+
+@media (max-width: 767px)
+  .header
+    max-width: 100%
+    height: 56px
+    margin: 0
+    position: relative
+
+    &__shop
+      display: none
+
+      &_footer
+        display: flex
+        margin-left: 0
+        margin-bottom: 16px
+
+    &__text
+      display: none
+      &_mobile
+        display: block
+
+    &__menu-mobile
+      display: block
+
+    &__left, &__right
+      display: none
+
+    &__mobile, &__left-mobile, &__right-mobile
+      display: flex

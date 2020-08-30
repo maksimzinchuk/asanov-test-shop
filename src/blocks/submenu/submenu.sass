@@ -1,0 +1,36 @@
+.submenu 
+    width: 280px
+    height: 800px
+    background: $whiteColor
+    margin: 0
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.06)
+    border: none
+    border-radius: 0px
+    padding: 0
+    top: 0 !important
+    left: 280px !important
+
+    &__button 
+        height: 40px
+        margin-left: 16px
+
+    &__header 
+        @include text-params(24px, 32px, bold, normal, $darkColor)
+        margin: 40px 0 16px 16px
+        
+
+    &__items 
+        margin-left: 16px
+    &__link
+        color: $darkColor
+
+@media ( max-width: 767px  )
+    .submenu
+        left: 0 !important
+        top: auto !important
+        box-shadow: none
+        padding-top: 10px
+        height: fit-content
+        &__header
+            display: none
+        

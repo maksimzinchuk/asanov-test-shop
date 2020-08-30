@@ -1,0 +1,128 @@
+.sidebar 
+  width: 280px
+  height: 800px
+  background: $whiteColor
+  padding: 0
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.06)
+  position: fixed
+  top: 0
+  z-index: 7
+  
+  &__button 
+    height: 43px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    cursor: pointer
+
+  &__button-mobile
+    @extend .sidebar__button
+    height: 48px
+    background: #F2F1F3
+    border-radius: 8px
+    margin: 8px 16px
+    display: none
+    &_more
+      height: 48px
+      border: 1px solid #E6E4E7
+      background: #ffffff
+
+  &__button:hover 
+    background: #fdeaf1
+
+  &__icon 
+    margin-left: 18px
+
+  &__line 
+    width: 248px
+    background: #e6e4e7
+
+  &__title 
+    @include text-params(14px, 24px, normal, normal, $darkColor)
+    margin: 3px 0 0 8px
+    height: fit-content
+    &_more
+      margin: 0
+    
+  &__more
+    
+    margin: 0 auto
+    display: flex
+    flex-direction: row
+    align-items: center
+    
+
+  &__arrow-mobile
+    background-image: url(../images/icon/arrow-bold-3.svg)
+    background-size: 8px 8px
+    height: 8px
+    width: 8px
+    margin-left: 8px
+    &_up
+      background-image: url(../images/icon/arrow-bold-4.svg)
+    
+  &__toggle_right
+    background-image: url(../images/icon/arrow-bold.svg)
+    background-size: 10px 10px
+    height: 10px
+    width: 10px
+    margin-right: 29px
+    &_closed
+      display: none
+
+  &__toggle_left
+    @include back-image('../images/icon/arrow-left.svg', 10px, 10px)
+    align-self: center
+    margin-left: 21px
+  
+    display: none
+    &_opened
+      display: block
+
+  &__wrapper 
+    display: flex
+    flex-direction: row
+    
+  &__logo
+    @include back-image('../images/icon/2.svg', 240px, 46px)
+    
+    margin: 13px auto 23px
+
+  &__visible
+    visibility: visible !important
+
+  &__hidden
+    display: none
+    &_show
+      display: block
+
+@media (max-width: 767px)
+  .sidebar
+    visibility: hidden
+    position: absolute
+    height: 690px
+    top: 56px
+    &__logo
+      display: none
+      &_mobile
+        display: block
+        background-size: 146px 28px
+        width: 146px
+        height: 28px
+        margin: 0
+
+    &__button:hover
+      background: #ffffff
+      
+    &__button-mobile
+      display: flex
+      
+    &__button-mobile:hover &__title
+      color: #ffffff
+      
+    &__button-mobile:hover
+      background: $pinkColor
+
+    &__button-mobile:hover &__icon-fill
+      fill: #ffffff

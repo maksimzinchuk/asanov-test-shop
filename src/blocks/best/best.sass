@@ -1,0 +1,36 @@
+.best
+    display: flex
+    margin-top: 39px
+    margin-left: 40px
+    &__line
+        background-color: $pinkColor
+        margin-top: 16px
+        width: 100%
+        display: none
+    &__image
+        @include back-image('../images/icon/promo-1.svg', 28px, 28px)
+        align-self: center
+
+    &__title
+        @include text-params(24px, 32px, bold, normal, $darkColor)
+        margin: 0 0 0 10px
+
+        &_mobile
+            @include text-params(20px, 24px, bold, normal, $darkColor)
+            margin: 0 0 0 10px
+            display: none
+
+@media (max-width: 767px)
+    .best
+        margin-left: 16px
+        margin-top: 25px
+        &__line
+            display: block
+        &__title
+            display: none
+
+            &_mobile
+                display: block
+            
+        
+        

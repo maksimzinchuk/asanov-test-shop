@@ -1,0 +1,98 @@
+.search
+    max-width: 1000px
+    height: 72px
+    color: $whiteColor
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__navbar
+        margin-left: 40px
+        margin-right: 20px
+        width: 678px
+        
+    &__image
+        @include back-image('../images/icon/search.svg', 24px, 24px)
+        background-position: center
+        filter: invert(100%)
+        margin-top: 8px
+        margin-left: 8px
+        
+    &__button
+        background: $pinkColor
+        border-radius: 0px 8px 8px 0px
+        width: 40px
+        height: 40px
+        outline: none
+        border: none
+        position: absolute
+        right: 0
+
+    &__input
+        max-width: 673px
+        height: 40px !important
+        border: 1px solid #E6E4E7
+        box-sizing: border-box
+        border-radius: 8px
+        box-shadow: none
+        
+    &__login
+        display: flex
+        align-items: center
+        margin-right: 61px
+
+    &__login-image
+        @include back-image('../images/icon/account.svg', 24px, 24px)
+        margin-right: 5px
+        &_mobile
+            margin-right: 7px
+
+    &__login-text
+        @include text-params(14px, 24px, normal, normal, $darkColor)
+        margin: 0
+
+    &__mobile
+        display: flex
+        max-width: 673px
+        flex-flow: row
+        position: relative
+        
+    &__input-mobile
+        margin: 0
+        border-radius: 8px
+        height: 40px !important
+        position: relative
+
+    &__navbar-mobile
+        max-width: 100%
+        margin: 0 16px 
+        display: none
+    &__line
+        background-color: $pinkColor
+        margin-bottom: 8px
+        margin-top: 16px
+        width: 100%
+        display: none
+       
+    &__input:hover, &__input-mobile:hover 
+        border: 1px solid $pinkColor
+
+    &__input:focus, &__input-mobile:hover 
+        border: 1px solid $pinkColor
+        box-shadow: none
+
+    &__login:hover
+        text-decoration: none
+
+    &__login:hover &__login-text
+        color: $pinkColor
+
+@media (max-width: 767px)
+    .search
+        display: none
+        &__navbar-mobile
+            display: block
+        &__mobile
+            max-width: 100%
+        
+        &__line
+            display: block

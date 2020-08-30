@@ -1,0 +1,49 @@
+.basket
+    width: 88px
+    height: 24px
+    margin-right: 20px
+    &__container
+    display: flex
+    flex-direction: row
+    &__price
+        @include text-params(14px, 24px, bold, normal, $darkColor)
+        margin: 0
+    &__image
+        @include back-image('../images/icon/shoping-cart/empty.svg', 24px, 24px)
+        position: relative
+        margin-right: 9px
+    &__counter-image
+        width: 16px
+        height: 16px
+        border: 1px solid $whiteColor
+        border-radius: 50%
+        background: $pinkColor
+        position: absolute
+        right: -3px
+        top: -6px
+        &_mobile
+            width: 17px
+            height: 17px
+
+    &__counter-number
+        @include text-params(9px, 10px, bold, normal, $whiteColor)
+        margin: 2px 
+        &_mobile
+            margin-top: 3px
+            margin-left: 2px
+
+    &:hover
+        cursor: pointer
+        
+
+    &:hover &__price
+        color: $pinkColor
+    &:hover &__image
+        background-image: url(../images/icon/shoping-cart/emptyPink.svg)
+        
+
+        
+@media (max-width: 767px)
+    .basket
+        &__image
+            margin-right: 12px
