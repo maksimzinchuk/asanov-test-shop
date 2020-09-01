@@ -71,7 +71,7 @@ export default function slider() {
     let xUp = event.touches[0].clientX;
     let xDiff = xDown - xUp;
 
-    if (Math.abs(xDiff) > 50) {
+    if (Math.abs(xDiff) > 0) {
       if (xDiff > 0) {
         //свайп влево
         nextSlide();
