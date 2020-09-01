@@ -2,10 +2,10 @@
 
 Ссылка на проект: https://maksimzinchuk.github.io/asanov-test-shop
 
-Проект предоставляет собой страницу интернет магазина с адаптивной версткой. Сделано с использованием измененных компонентов
+Проект предоставляет собой страницу интернет-магазина с адаптивной версткой. Сделано с использованием измененных компонентов
 Bootstrap, слайдер написан с нуля, есть возможность переключать карточки свайпами.
 
-Использованные технологии: БЭМ, grid, flexbox, javascript, adaptive/responsive верстка, Webpack, Babel, PostCSS, Bootstrap, svg.
+Использованные технологии: БЭМ, grid, flexbox, javascript, adaptive/responsive верстка, SASS, Webpack, Babel, PostCSS, Bootstrap, svg.
 
 ## **Сборка проекта**
 
